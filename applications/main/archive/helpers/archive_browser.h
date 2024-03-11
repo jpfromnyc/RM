@@ -18,6 +18,7 @@ static const char* tab_default_paths[] = {
     [ArchiveTabBadUsb] = ANY_PATH("badusb"),
     [ArchiveTabU2f] = "/app:u2f",
     [ArchiveTabApplications] = ANY_PATH("apps"),
+    [ArchiveTabDiskImage] = STORAGE_MNT_PATH_PREFIX,
     [ArchiveTabInternal] = STORAGE_INT_PATH_PREFIX,
     [ArchiveTabBrowser] = STORAGE_ANY_PATH_PREFIX,
 };
@@ -34,6 +35,7 @@ static const char* known_ext[] = {
     [ArchiveFileTypeApplication] = ".fap",
     [ArchiveFileTypeJS] = ".js",
     [ArchiveFileTypeUpdateManifest] = ".fuf",
+    [ArchiveFileTypeDiskImage] = ".img",
     [ArchiveFileTypeFolder] = "?",
     [ArchiveFileTypeUnknown] = "*",
     [ArchiveFileTypeAppOrJs] = ".fap|.js",
@@ -50,6 +52,7 @@ static const ArchiveFileTypeEnum known_type[] = {
     [ArchiveTabBadUsb] = ArchiveFileTypeBadUsb,
     [ArchiveTabU2f] = ArchiveFileTypeU2f,
     [ArchiveTabApplications] = ArchiveFileTypeAppOrJs,
+    [ArchiveTabDiskImage] = ArchiveFileTypeUnknown,
     [ArchiveTabInternal] = ArchiveFileTypeUnknown,
     [ArchiveTabBrowser] = ArchiveFileTypeUnknown,
 };
